@@ -25,12 +25,25 @@ $api = new apiOfLegends();
 
 API of Legends provides a lot of functions to access League of Legends data. You can find all attributes and methods explained here:
 
+- [Set Region](#set-region)
 - [Get Summoner Icon](#get-summoner-icon)
 - [Get Summoner By Name](#get-summoner-by-name)
 - [Get Summoner By ID](#get-summoner-by-id)
 - [Get Summoner Masteries](#get-summoner-masteries)
 - [Get Match History](#get-match-history)
 - [Get Summoner Stats](#get-summoner-stats)
+- [Get Recent Games](#get-recent-games)
+- [Get Champions](#get-champions)
+- [Get Match](#get-match)
+- [Get Status](#get-status)
+
+##### Set Region
+```php
+// This must be set before executing any other method.
+// @params: string $region
+// @return: -
+$api->setRegion("euw"); // Default is set to "na"
+```
 
 ##### Get Summoner Icon
 ```php
@@ -72,6 +85,36 @@ $api->getMatchHistory(21695378);
 // @params: int $summoner_id, [string $option (summary/ranked)]
 // @return: Summoner Stats summary or ranked
 $api->getSummonerStats(21695378, "summary");
+```
+
+##### Get Recent Games
+```php
+// @params: int $summoner_id
+// @return: Recent game data by given summoner (array)
+$api->getRecentGames(21695378);
+```
+
+##### Get Champions
+```php
+// @params: [int $champion_id]
+// @return: List of all champions or champion given by id (array)
+$api->getChampion(); // List of all
+$api->getChampion(266); // Aatrox
+```
+
+##### Get Match
+```php
+// @params: int $match_id
+// @return: Match data by given ID (array)
+$api->getMatch(1690892005);
+```
+
+##### Get Status
+```php
+// @params: [string $region]
+// @return: Returns overall game status or by given region
+$api->getStatus(); // Overall
+$api->getStatus("euw"); // Status for EUW
 ```
 
 ### Changelog

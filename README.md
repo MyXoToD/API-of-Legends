@@ -14,7 +14,7 @@ API of Legends is a simple PHP class to easily access Leagues of Legends data vi
 - Insert your Riot API key to `api-of-legends.php`
 - Insert the following lines into your application:
 
-```
+```php
 <?php
 require_once('/your-path/api-for-legends.php');
 $api = new apiOfLegends();
@@ -25,12 +25,18 @@ $api = new apiOfLegends();
 
 API of Legends provides a lot of functions to access League of Legends data. You can find all attributes and methods explained here:
 
-#### Get Summoner Icon
+##### Get Summoner Icon
 ```php
 // @params: Summoner ID
 // @return: Summoner Icon URL
-
 $api->getSummonerIcon(21695378);
+```
+
+##### Get Summoner By Name
+```php
+// @params: Summoner Name
+// @return: Summoner data
+$api->getSummonerByName("MyXoToD");
 ```
 
 More comming soon...

@@ -25,6 +25,9 @@ $api = new apiOfLegends();
 
 API of Legends provides a lot of functions to access League of Legends data. You can find all attributes and methods explained here:
 
+- [Get Summoner Icon](#get-summoner-icon)
+- [Get Summoner By Name](#get-summoner-by-name)
+
 ##### Get Summoner Icon
 ```php
 // @params: Summoner ID

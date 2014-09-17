@@ -56,13 +56,22 @@ class apiOfLegends {
 
   // Regions
   public $regions = array("br", "eune", "euw", "kr", "lan", "las", "na", "oce", "ru", "tr");
-  public $region = "na";
+  private $region = "na";
 
   /* ************* **
   ** ** METHODS ** **
   ** ************* */
   public function __construct() {
 
+  }
+
+  public function setRegion($region) {
+    $region = strtolower($region);
+    if (in_array($region, $this->regions)) {
+      $this->region = $region;
+    } else {
+      $this->region = "na";
+    }
   }
 
   // Get Summoner Icon

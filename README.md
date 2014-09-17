@@ -27,22 +27,52 @@ API of Legends provides a lot of functions to access League of Legends data. You
 
 - [Get Summoner Icon](#get-summoner-icon)
 - [Get Summoner By Name](#get-summoner-by-name)
+- [Get Summoner By ID](#get-summoner-by-id)
+- [Get Summoner Masteries](#get-summoner-masteries)
+- [Get Match History](#get-match-history)
+- [Get Summoner Stats](#get-summoner-stats)
 
 ##### Get Summoner Icon
 ```php
-// @params: Summoner ID
-// @return: Summoner Icon URL
-$api->getSummonerIcon(21695378);
+// @params: string $summoner_name
+// @return: Summoner Icon URL (String)
+$api->getSummonerIcon("MyXoToD");
 ```
 
 ##### Get Summoner By Name
 ```php
-// @params: Summoner Name
-// @return: Summoner data
+// @params: string $summoner_name
+// @return: Summoner data (array)
 $api->getSummonerByName("MyXoToD");
 ```
 
-More comming soon...
+##### Get Summoner By ID
+```php
+// @params: int $summoner_id
+// @return: Summoner data (array)
+$api->getSummonerById(21695378);
+```
+
+##### Get Summoner Masteries
+```php
+// @params: int $summoner_id
+// @return: Masteries by given Summoner (array)
+$api->getSummonerMasteries(21695378);
+```
+
+##### Get Match History
+```php
+// @params: int $summoner_id
+// @return: Match History by given Summoner (array)
+$api->getMatchHistory(21695378);
+```
+
+##### Get Summoner Stats
+```php
+// @params: int $summoner_id, [string $option (summary/ranked)]
+// @return: Summoner Stats summary or ranked
+$api->getSummonerStats(21695378, "summary");
+```
 
 ### Changelog
 

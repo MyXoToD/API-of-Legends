@@ -19,7 +19,7 @@
     //   echo "<hr />";
     // }
 
-    $api->region = "euw";
+    $api->setRegion("euw");
     echo "<pre>";
     print_r($api->getMatch(1690892005));
     // print_r($api->getRecentGames(21695378));

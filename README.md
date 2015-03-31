@@ -119,6 +119,8 @@ $api->getStatus("euw"); // Status for EUW
 
 ### Changelog
 
+- v0.2.0 (31. March 2015)
+  - Added a lot of new methods (still improvement needed)
 - v0.1.0 (17. September 2014)
   - Created API of Legends
 

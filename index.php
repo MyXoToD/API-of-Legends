@@ -21,13 +21,13 @@
 
     $api->setRegion("euw");
     echo "<pre>";
-    print_r($api->getMatch(1690892005));
+    // print_r($api->getMatch(1690892005));
     // print_r($api->getRecentGames(21695378));
     // print_r($api->getChampion(266));
     // print_r($api->getStatus());
     // print_r($api->getRankedStats(21695378));
-    // print_r($api->getSummaryStats(21695378));
-    // print_r($api->getSummonerByName("MyXoToD"));
+    // print_r($api->getSummonerStats(21695378));
+    print_r($api->getSummonerByName("MyXoToD,McSebbo"));
     // print_r($api->getMatchHistory(21695378));
     // print_r($api->getSummonerById(21695378));
     // print_r($api->getSummonerMasteries(21695378));
